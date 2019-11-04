@@ -1,0 +1,22 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// FullCalendar: we need to use a custom CSS file for printing the grid lines and 
+// have all events with a consistent size
+//@import '~@fullcalendar/core/main.css';
+@import './fullcalendar.css';
+@import './fullcalendar-print.css';
+//Media print rules are not satisfying, see https://github.com/fullcalendar/fullcalendar/issues/4437
+@import '~@fullcalendar/dayGrid/main.css';
+@import '~@fullcalendar/resource-timeline/main.css';
+@import '~@fullcalendar/timegrid/main.css';
+@import '~@fullcalendar/timeline/main.css';
+
+//Material Design Icons
+@import '~vue-material-design-icons/styles.css';
+
+@media print {
+    .no-print, .no-print * {
+      display: none !important;
+    }
+}

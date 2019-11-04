@@ -1,0 +1,31 @@
+image: node:8.11.3
+
+before_script:
+  - composer install
+  - npm install
+
+stages:
+  - build
+  - page
+
+build:
+  cache:
+    paths:
+      - node_modules/
+  stage: build
+  script:
+    - npm run prod
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: page
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm run docs:build
+  artifacts:
+    paths:
+      - public

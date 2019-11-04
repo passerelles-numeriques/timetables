@@ -1,0 +1,26 @@
+/vendor
+Homestead.json
+Homestead.yaml
+.env
+public/js/main.js
+public/css/app.css
+public/mix-manifest.json
+public/css
+public/fonts
+
+storage/db
+
+.DS_Store
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/tests/unit/coverage/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

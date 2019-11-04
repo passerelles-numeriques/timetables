@@ -1,0 +1,52 @@
+
+@media print {
+    .fc {
+      max-width: 95% !important;
+      max-height: 95% !important;
+    }
+    .fc-event {
+      background: #fff !important;
+      color: #000 !important;
+      page-break-inside: avoid; }
+  
+    .fc-event .fc-resizer {
+      display: none; }
+  
+    /* Undo month-view event limiting. Display all events and hide the "more" links
+    --------------------------------------------------------------------------------------------------*/
+    .fc-more-cell,
+    .fc-more {
+      display: none !important; }
+  
+    .fc tr.fc-limited {
+      display: table-row !important; }
+  
+    .fc td.fc-limited {
+      display: table-cell !important; }
+  
+    .fc-popover {
+      display: none;
+      /* never display the "more.." popover in print mode */ }
+      
+    /* Vertical Scroller & Containers
+    --------------------------------------------------------------------------------------------------*/
+    /* kill the scrollbars and allow natural height */
+    .fc-scroller,
+    .fc-day-grid-container,
+    .fc-time-grid-container {
+      /* */
+      overflow: visible !important;
+      height: auto !important; }
+  
+    /* kill the horizontal border/padding used to compensate for scrollbars */
+    .fc-row {
+      border: 0 !important;
+      margin: 0 !important; }
+  
+    /* Button Controls
+    --------------------------------------------------------------------------------------------------*/
+    .fc-button-group,
+    .fc button {
+        display: none;
+        /* don't display any button-related controls */ }
+}

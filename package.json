@@ -1,0 +1,53 @@
+{
+  "name": "pnc-timetables-frontend",
+  "version": "1.0.0",
+  "description": "Frontend manager for pnc timetables",
+  "author": "Milihhard <milihhard1996@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "unit": "cross-env BABEL_ENV=test karma start tests/unit/karma.conf.js --single-run",
+    "test": "npm run unit",
+    "lint": "eslint --ext .js,.vue src tests/unit",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
+    "@fullcalendar/list": "^4.3.0",
+    "@fullcalendar/resource-timeline": "^4.3.0",
+    "@fullcalendar/timegrid": "^4.3.0",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "popper.js": "^1.15.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "vue-material-design-icons": "^4.1.0",
+    "vue-router": "^3.1.3",
+    "vuejs-datepicker": "^1.6.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.1",
+    "laravel-mix": "^5.0.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie <= 11"
+  ]
+}
